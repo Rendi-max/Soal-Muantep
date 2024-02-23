@@ -4,14 +4,9 @@
     $result = longestIncrement($angka);
     function longestIncrement($angka){
         $maxIncrement = 0;
-        $currentIncrement = 1;
-
-        for ($i = 1; $i < count($angka); $i++) {
+        for ($i = 1; $i < sizeof($angka); $i++) {
             if ($angka[$i] > $angka[$i - 1]) {
-                $currentIncrement++;
-            } else {
-                $maxIncrement = max($maxIncrement, $currentIncrement);
-                $currentIncrement = 1;
+                $maxIncrement++;
             }
         }
     
